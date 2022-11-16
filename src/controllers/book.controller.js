@@ -1,4 +1,4 @@
-const { bookService } = require('../services/index.js');
+const { bookService } = require('../services');
 const httpStatus = require('http-status');
 const APIError = require('../utils/APIError.js');
 const catchErrors = require('../utils/catchErrors.js');

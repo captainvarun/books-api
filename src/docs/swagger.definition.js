@@ -3,7 +3,7 @@ const config = require('../config/index.js');
 const swaggerDefinition = {
   openapi: '3.0.0',
   info: {
-    title: 'Vocally: Library Management API',
+    title: 'Books: Books Management API',
     version: '0.0.1',
     description: 'Manage books across your library seamlesslly',
     license: {

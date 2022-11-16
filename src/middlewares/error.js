@@ -1,6 +1,7 @@
 const APIError = require('../utils/APIError.js');
 const httpStatus = require('http-status');
 const config = require('../config/index.js');
+const mongoose = require('mongoose');
 
 const errorConverter = (err, req, res, next) => {
   let error = err;

@@ -1,6 +1,4 @@
 const httpStatus = require('http-status');
-const mongoose = require('mongoose');
-const { User } = require('../models/index.js');
 const APIError = require('../utils/APIError.js');
 const { getUserByEmail } = require('./user.services.js');
 
