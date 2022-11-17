@@ -134,7 +134,7 @@ The above endpoint will respond with the following:
 }
  
 ```
-The access token as part of the response object will have to be used in the Authorization header using the Bearer schema i.e proceeding the token with bearer
+The access token as part of the response object will have to be used in the Authorization header using the Bearer schema i.e preceeding the token with **bearer**
 
 ## Commands:
 
