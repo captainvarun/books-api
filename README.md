@@ -1,4 +1,4 @@
-# Vocally: Backend Assignment
+# Backend Assignment
 
 This project is built using NodeJS(Express), MongoDB, Passport JWT and Docker
 
