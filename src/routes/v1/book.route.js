@@ -62,11 +62,11 @@ module.exports = router;
  *                 type: date
  *             example:
  *               title: fake name
- *               category: fake@example.com
- *               author: password1
- *               publisher: password1
- *               language: password1
- *               publicationDate: user
+ *               category: fake@fake.com
+ *               author: author
+ *               publisher: publisher
+ *               language: language
+ *               publicationDate: date
  *     responses:
  *       "201":
  *         description: Created
@@ -83,7 +83,7 @@ module.exports = router;
  *
  *   get:
  *     summary: Get all books
- *     description: Only admins can retrieve all users.
+ *     description: Only admins can retrieve all books.
  *     tags: [Books]
  *     security:
  *       - bearerAuth: []
@@ -135,60 +135,9 @@ module.exports = router;
  *       "404":
  *         $ref: '#/components/responses/NotFound'
  *
- *   patch:
- *     summary: Update a book
- *     description: Logged in users can only update their own information. Only admins can update other users.
- *     tags: [Books]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: string
- *         description: Book Id
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               name:
- *                 type: string
- *               email:
- *                 type: string
- *                 format: email
- *                 description: must be unique
- *               password:
- *                 type: string
- *                 format: password
- *                 minLength: 8
- *                 description: At least one number and one letter
- *             example:
- *               name: fake name
- *               email: fake@example.com
- *               password: password1
- *     responses:
- *       "200":
- *         description: OK
- *         content:
- *           application/json:
- *             schema:
- *                $ref: '#/components/schemas/Book'
- *       "400":
- *         $ref: '#/components/responses/DuplicateEmail'
- *       "401":
- *         $ref: '#/components/responses/Unauthorized'
- *       "403":
- *         $ref: '#/components/responses/Forbidden'
- *       "404":
- *         $ref: '#/components/responses/NotFound'
- *
  *   put:
  *     summary: Update a book
- *     description: Logged in users can only update their own information. Only admins can update other users.
+ *     description:
  *     tags: [Books]
  *     security:
  *       - bearerAuth: []
@@ -239,7 +188,7 @@ module.exports = router;
  *
  *   delete:
  *     summary: Delete a book
- *     description: Logged in users can delete only themselves. Only admins can delete other users.
+ *     description: Delete a book
  *     tags: [Books]
  *     security:
  *       - bearerAuth: []
