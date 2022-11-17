@@ -65,7 +65,7 @@ MongoDB database in conjunction with mongoose has been used for this project. So
 
 - This project does not include additional entities for things like authors to keep it simple.
 
-- The database structure has been implemented in a simple way and dies have scope for improvement if used for production applications.
+- The database structure has been implemented in a simple way and does have scope for improvement if used for production applications.
 
 - To keep it simple, data doesn't persist through docker sessions and for production applications this can be resolved.
  
