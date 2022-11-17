@@ -83,7 +83,7 @@ All endpoints that perform modification or addition are restricted by a JWT acce
 
 #### Registration:
 
-Before generating an access token, an user will first have to be created using  /api/v1/auth/register. Please note that by default if a role field is not passed, the user will receive the role ‘user’.
+Before generating an access token, an user will first have to be created using  /api/v1/auth/register. Please note that by default if a role field is not passed, the user will receive the role ‘user’. This version does not return access tokens upon registration.
 
 The endpoint will have to be called by passing the below fields in the body of the request:
 
@@ -135,7 +135,6 @@ The above endpoint will respond with the following:
  
 ```
 The access token as part of the response object will have to be used in the Authorization header using the Bearer schema i.e proceeding the token with bearer
-
 
 ## Commands:
 
